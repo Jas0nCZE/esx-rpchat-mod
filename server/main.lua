@@ -7,7 +7,8 @@ AddEventHandler('chatMessage', function(playerId, playerName, message)
 		CancelEvent()
 
 		playerName = GetRealPlayerName(playerId)
-		TriggerClientEvent('chat:addMessage', -1, {args = {_U('ooc_prefix', playerId), message}, color = {160, 160, 160, }})
+        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('ooc_prefix', playerId), message}, args, {255, 50, 50})
+        
 	end
 end)
 
@@ -139,7 +140,7 @@ RegisterCommand('me', function(playerId, args, rawCommand)
 		args = table.concat(args, ' ')
 		local playerName = GetRealPlayerName(playerId)
 
-		TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, source, _U('me_prefix', playerId), args, {255, 50, 50})
+		TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, _U('me_prefix', playerId), args, {255, 50, 50})
 	end
 end, false)
 
@@ -150,7 +151,7 @@ RegisterCommand('do', function(playerId, args, rawCommand)
 		args = table.concat(args, ' ')
 		local playerName = GetRealPlayerName(playerId)
 
-		TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, source, _U('do_prefix', playerId), args, {83, 170, 230})
+		TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, _U('do_prefix', playerId), args, {83, 170, 230})
 	end
 end, false)
 
