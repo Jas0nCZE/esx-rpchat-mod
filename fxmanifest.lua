@@ -1,8 +1,8 @@
-fx_version 'adamant'
+fx_version 'cerulean'
 
 game 'gta5'
 
-description 'ESX RP Chat'
+description 'RP CHAT modified by Project-Entity'
 
 version '1.3.1'
 
