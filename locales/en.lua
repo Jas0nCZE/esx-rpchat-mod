@@ -22,4 +22,10 @@ Locales['en'] = {
   ['taxi_prefix'] = '🚕 Downtown Cab Co | %s^0',
   ['generic_argument_name'] = 'message',
   ['generic_argument_help'] = 'the message',
+  ['no_police'] = '🚓 | You do not work at Los Santos Police Department',
+  ['no_ambulance'] = '🚑 | You do not work at Los Santos Fire Department',
+  ['no_bennys'] = '🧰 | You do not work at Bennys Original Motor Works',
+  ['no_lsc'] = '🛠️ | You do not work at Los Santos Customs',
+  ['no_tdn'] = '🔧 | You do not work at Taller del Norte',
+  ['no_taxi'] = '🚕 | You do not work at Downtown Cab Co',
 }

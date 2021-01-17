@@ -22,4 +22,10 @@ Locales['es'] = {
   ['taxi_prefix'] = '🚕 Taxis | %s^0',
   ['generic_argument_name'] = 'message',
   ['generic_argument_help'] = 'the message',
+  ['no_police'] = '🚓 | Usted no trabaja en el Cuerpo Nacional de Policia',
+  ['no_ambulance'] = '🚑 | Usted no trabaja en la Cruz Roja',
+  ['no_bennys'] = '🧰 | Usted no trabaja en el Taller Modificaciones Automovilisticas',
+  ['no_lsc'] = '🛠️ | Usted no trabaja en el Taller de Mecánica General',
+  ['no_tdn'] = '🔧 | Usted no trabaja en el Taller Mecanica del Automovil',
+  ['no_taxi'] = '🚕 | Usted no trabaja en la empresa de Taxis',
 }

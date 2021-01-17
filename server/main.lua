@@ -7,7 +7,7 @@ AddEventHandler('chatMessage', function(playerId, playerName, message)
 		CancelEvent()
 
 		playerName = GetRealPlayerName(playerId)
-        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('ooc_prefix', playerId), message}, args, {255, 50, 50})
+        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('ooc_prefix', playerId), message}, args, {160, 160, 160})
         
 	end
 end)
@@ -44,6 +44,8 @@ RegisterCommand('police', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('police_prefix', name), args}, color = {0, 0, 250}})
         end
+    else
+        print (_U('no_police')) 
     end
 end, false)
 
@@ -57,8 +59,10 @@ RegisterCommand('ambulance', function(source, args, rawCommand)
         if player ~= false then
             local name = GetRealPlayerName(source)
 
-			TriggerClientEvent('chat:addMessage', -1, {args = {_U('ambulance_prefix', name), args}, color = {250, 0, 0}})
+            TriggerClientEvent('chat:addMessage', -1, {args = {_U('ambulance_prefix', name), args}, color = {250, 0, 0}})
         end
+    else
+        print (_U('no_ambulance')) 
     end
 end, false)
 
@@ -74,6 +78,8 @@ RegisterCommand('bennys', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('bennys_prefix', name), args}, color = {204, 0, 82}})
         end
+    else
+        print (_U('no_bennys')) 
     end
 end, false)
 
@@ -89,6 +95,8 @@ RegisterCommand('lsc', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('lsc_prefix', name), args}, color = {51, 0, 102}})
         end
+    else
+        print (_U('no_lsc')) 
     end
 end, false)
 
@@ -104,6 +112,8 @@ RegisterCommand('tdn', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('tdn_prefix', name), args}, color = {51, 0, 0}})
         end
+    else
+        print (_U('no_tdn')) 
     end
 end, false)
 
@@ -119,19 +129,10 @@ RegisterCommand('taxi', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('taxi_prefix', name), args}, color = {255, 255, 51}})
         end
+    else
+        print (_U('no_taxi')) 
     end
 end, false)
-
---RegisterCommand('', function(playerId, args, rawCommand)
---	if playerId == 0 then
---		print('esx_rpchat: you can\'t use this command from console!')
---	else
---		args = table.concat(args, ' ')
---		local playerName = GetRealPlayerName(playerId)
---
---		TriggerClientEvent('chat:addMessage', -1, {args = {_U('a_prefix', playerName), args}, color = {0, 153, 204}})
---	end
---end, false)
 
 RegisterCommand('me', function(playerId, args, rawCommand)
 	if playerId == 0 then

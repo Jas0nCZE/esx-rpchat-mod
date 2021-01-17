@@ -22,4 +22,10 @@ Locales['fr'] = {
   ['taxi_prefix'] = '🚕 Taxi Parisien | %s^0',
   ['generic_argument_name'] = 'message',
   ['generic_argument_help'] = 'the message',
+  ['no_police'] = '🚓 | Vous ne travaillez pas dans le Police Nationale',
+  ['no_ambulance'] = '🚑 |Vous ne travaillez pas dans la Croix Rouge',
+  ['no_bennys'] = '🧰 | Vous ne travaillez pas dans le First Stop',
+  ['no_lsc'] = '🛠️ | Vous ne travaillez pas dans le Taller Mecanico',
+  ['no_tdn'] = '🔧 | Vous ne travaillez pas dans Norauto',
+  ['no_taxi'] = '🚕 | Vous ne travaillez pas dans Taxi Parisien',
 }
