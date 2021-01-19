@@ -7,7 +7,7 @@ AddEventHandler('chatMessage', function(playerId, playerName, message)
 		CancelEvent()
 
 		playerName = GetRealPlayerName(playerId)
-        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('ooc_prefix', playerId), message}, args, {160, 160, 160})
+        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('oop_prefix', playerId).. message}, args, {160, 160, 160})
         
 	end
 end)
@@ -44,8 +44,11 @@ RegisterCommand('police', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('police_prefix', name), args}, color = {0, 0, 250}})
         end
-    else
-        print (_U('no_police')) 
+    elseif Config.Tnotify then
+        print(_U('no_police')) 
+
+    elseif Config.ESX then
+        print('esx')
     end
 end, false)
 
@@ -61,8 +64,9 @@ RegisterCommand('ambulance', function(source, args, rawCommand)
 
             TriggerClientEvent('chat:addMessage', -1, {args = {_U('ambulance_prefix', name), args}, color = {250, 0, 0}})
         end
-    else
+    elseif Config.Tnotify then
         print (_U('no_ambulance')) 
+    elseif Config.ESX then
     end
 end, false)
 
@@ -78,8 +82,10 @@ RegisterCommand('bennys', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('bennys_prefix', name), args}, color = {204, 0, 82}})
         end
-    else
+
+    elseif Config.Tnotify then
         print (_U('no_bennys')) 
+    elseif Config.Tnotify then
     end
 end, false)
 
@@ -95,8 +101,10 @@ RegisterCommand('lsc', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('lsc_prefix', name), args}, color = {51, 0, 102}})
         end
-    else
+    elseif Config.Tnotify then
         print (_U('no_lsc')) 
+    elseif Config.ESX then
+
     end
 end, false)
 
@@ -112,8 +120,9 @@ RegisterCommand('tdn', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('tdn_prefix', name), args}, color = {51, 0, 0}})
         end
-    else
+    elseif Config.Tnotify then
         print (_U('no_tdn')) 
+    elseif Config.ESX then
     end
 end, false)
 
@@ -129,8 +138,9 @@ RegisterCommand('taxi', function(source, args, rawCommand)
 
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('taxi_prefix', name), args}, color = {255, 255, 51}})
         end
-    else
+    elseif Config.Tnotify then
         print (_U('no_taxi')) 
+    elseif Config.Tnotify then
     end
 end, false)
 

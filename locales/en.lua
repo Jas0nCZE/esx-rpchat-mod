@@ -1,5 +1,5 @@
 Locales['en'] = {
-  ['ooc_prefix'] = '[%s] OOP',
+  ['oop_prefix'] = '[%s] OOP: ',
   ['a_help'] = 'Canal de ayuda',
   ['a_prefix'] = '[%s] Ayuda',
   ['id_help'] = 'Canal para pedir la id de algun jugador',
@@ -22,6 +22,8 @@ Locales['en'] = {
   ['taxi_prefix'] = '🚕 Downtown Cab Co | %s^0',
   ['generic_argument_name'] = 'message',
   ['generic_argument_help'] = 'the message',
+  
+  --Notifications
   ['no_police'] = '🚓 | You do not work at Los Santos Police Department',
   ['no_ambulance'] = '🚑 | You do not work at Los Santos Fire Department',
   ['no_bennys'] = '🧰 | You do not work at Bennys Original Motor Works',

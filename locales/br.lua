@@ -1,5 +1,5 @@
 Locales['br'] = {
-  ['ooc_prefix'] = '[%s] OOP',
+  ['oop_prefix'] = '[%s] OOP: ',
   ['a_help'] = 'Canal de ayuda',
   ['a_prefix'] = '[%s] Ayuda',
   ['id_help'] = 'Canal para pedir la id de algun jugador',
@@ -22,6 +22,8 @@ Locales['br'] = {
   ['taxi_prefix'] = '🚕 Radio Taxi | %s^0',
   ['generic_argument_name'] = 'message',
   ['generic_argument_help'] = 'the message',
+  
+  --Notifications
   ['no_police'] = '🚓 | Não trabalha na Polícia Federal',
   ['no_ambulance'] = '🚑 | Não trabalha na Cruz Roja',
   ['no_bennys'] = '🧰 | Não trabalha na Checar Centro Automotivo',

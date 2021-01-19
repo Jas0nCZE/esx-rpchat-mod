@@ -1,5 +1,8 @@
 Config = {}
 
 Config.Locale = 'en'
-Config.OnlyFirstname = false
-Config.EnableESXIdentity = true -- only turn this on if you are using esx_identity and want to use RP names
+Config.OnlyFirstname = false -- Use first name only // Usar solo en primer nombre
+Config.EnableESXIdentity = true -- Usar nombres del juego (esx_identity) // Usar nombres reales
+
+Config.Tnotify = true
+Config.ESX = false
