@@ -1,8 +1,7 @@
 # pe_rpchat
 
 #### Description
-This is a chat perfect for RP servers. It includes basic comands such as /a, /do....
-
+An average esx_rpchat which has been modified.
 ## Download & Installation
 
 ### Manually
@@ -14,4 +13,4 @@ This is a chat perfect for RP servers. It includes basic comands such as /a, /do
 - 2. Extract the files into a folder
 - 3. Add the script into your resources folder.
 - 4. Add 'ensure pe-rpchat' into your server.cfg.
-- 5. Chek the script's config.lua to adjust the script however you want.
+- 5. Check the script's config.lua to adjust the script however you want.

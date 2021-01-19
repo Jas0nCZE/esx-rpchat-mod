@@ -2,7 +2,7 @@ fx_version 'cerulean'
 
 game 'gta5'
 
-description 'RP CHAT modified by Project-Entity'
+description 'This is the average esx_rpchat modified by Project-Entity'
 
 version '1.3.1'
 
