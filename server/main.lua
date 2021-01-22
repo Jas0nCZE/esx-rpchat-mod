@@ -7,14 +7,14 @@ AddEventHandler('chatMessage', function(playerId, playerName, message)
 		CancelEvent()
 
 		playerName = GetRealPlayerName(playerId)
-        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('oop_prefix', playerId).. message}, args, {160, 160, 160})
+        TriggerClientEvent('esx_rpchat:sendProximityMessage', -1, playerId, {_U('oop_prefix', playerId).. "~w~" ..message}, args)
         
 	end
 end)
 
-RegisterCommand('a', function(playerId, args, rawCommand)
+RegisterCommand(Config.HelpCommand, function(playerId, args, rawCommand)
 	if playerId == 0 then
-		print('esx_rpchat: you can\'t use this command from console!')
+		print(_U('no') )
 	else
 		args = table.concat(args, ' ')
 
@@ -22,9 +22,9 @@ RegisterCommand('a', function(playerId, args, rawCommand)
 	end
 end, false)
 
-RegisterCommand('id', function(playerId, args, rawCommand)
+RegisterCommand(Config.IDCommand, function(playerId, args, rawCommand)
 	if playerId == 0 then
-		print('esx_rpchat: you can\'t use this command from console!')
+		print(_U('no') )
 	else
 		args = table.concat(args, ' ')
 
@@ -32,12 +32,13 @@ RegisterCommand('id', function(playerId, args, rawCommand)
 	end
 end, false)
 
-RegisterCommand('police', function(source, args, rawCommand)
+RegisterCommand(Config.PoliceCommand, function(source, args, rawCommand)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    if xPlayer.job.name == "police" then
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.PoliceJob then
         local src = source
-        local msg = rawCommand:sub(5)
+        local msg = rawCommand:sub(7)
         local args = msg
         if player ~= false then
             local name = GetRealPlayerName(source)
@@ -46,18 +47,24 @@ RegisterCommand('police', function(source, args, rawCommand)
         end
     elseif Config.Tnotify then
         print(_U('no_police')) 
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_police')
+        })
 
     elseif Config.ESX then
-        print('esx')
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_pol'), playerName, _U('no_police'), 'CHAR_BLOCKED', 1)
     end
 end, false)
 
-RegisterCommand('ambulance', function(source, args, rawCommand)
+RegisterCommand(Config.AmbulanceCommand, function(source, args, rawCommand)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    if xPlayer.job.name == "ambulance" then
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.AmbulanceJob then
         local src = source
-        local msg = rawCommand:sub(5)
+        local msg = rawCommand:sub(10)
         local args = msg
         if player ~= false then
             local name = GetRealPlayerName(source)
@@ -65,17 +72,24 @@ RegisterCommand('ambulance', function(source, args, rawCommand)
             TriggerClientEvent('chat:addMessage', -1, {args = {_U('ambulance_prefix', name), args}, color = {250, 0, 0}})
         end
     elseif Config.Tnotify then
-        print (_U('no_ambulance')) 
+        print (_U('no_amb'))
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_ambulance')
+        })
     elseif Config.ESX then
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_amb'), playerName, _U('no_ambulance'), 'CHAR_CALL911', 1)
     end
 end, false)
 
-RegisterCommand('bennys', function(source, args, rawCommand)
+RegisterCommand(Config.BennysCommand, function(source, args, rawCommand)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    if xPlayer.job.name == "mechanic" then
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.BennysJob then
         local src = source
-        local msg = rawCommand:sub(5)
+        local msg = rawCommand:sub(7)
         local args = msg
         if player ~= false then
             local name = GetRealPlayerName(source)
@@ -84,17 +98,24 @@ RegisterCommand('bennys', function(source, args, rawCommand)
         end
 
     elseif Config.Tnotify then
-        print (_U('no_bennys')) 
-    elseif Config.Tnotify then
+        print (_U('no_bennys'))
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_bennys')
+        })
+    elseif Config.ESX then
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_bennys'), playerName, _U('no_bennys'), 'CHAR_CARSITE', 1)
     end
 end, false)
 
-RegisterCommand('lsc', function(source, args, rawCommand)
+RegisterCommand(Config.LSCCommand, function(source, args, rawCommand)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    if xPlayer.job.name == "mechanic" then
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.LSCJob then
         local src = source
-        local msg = rawCommand:sub(5)
+        local msg = rawCommand:sub(4)
         local args = msg
         if player ~= false then
             local name = GetRealPlayerName(source)
@@ -102,18 +123,23 @@ RegisterCommand('lsc', function(source, args, rawCommand)
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('lsc_prefix', name), args}, color = {51, 0, 102}})
         end
     elseif Config.Tnotify then
-        print (_U('no_lsc')) 
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_lsc')
+        })
     elseif Config.ESX then
-
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_lsc'), playerName, _U('no_lsc'), 'CHAR_LS_CUSTOMS', 1)
     end
 end, false)
 
-RegisterCommand('tdn', function(source, args, rawCommand)
+RegisterCommand(Config.TDNCommand, function(source, args, rawCommand)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    if xPlayer.job.name == "mechanic" then
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.TDNJob then
         local src = source
-        local msg = rawCommand:sub(5)
+        local msg = rawCommand:sub(4)
         local args = msg
         if player ~= false then
             local name = GetRealPlayerName(source)
@@ -121,15 +147,21 @@ RegisterCommand('tdn', function(source, args, rawCommand)
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('tdn_prefix', name), args}, color = {51, 0, 0}})
         end
     elseif Config.Tnotify then
-        print (_U('no_tdn')) 
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_tdn')
+        })
     elseif Config.ESX then
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_lsc'), playerName, _U('no_lsc'), 'CHAR_CHAT_CALL', 1)
     end
 end, false)
 
-RegisterCommand('taxi', function(source, args, rawCommand)
+RegisterCommand(Config.TaxiCommand, function(source, args, rawCommand)
     local _source = source
     local xPlayer = ESX.GetPlayerFromId(_source)
-    if xPlayer.job.name == "taxi" then
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.TaxiJob then
         local src = source
         local msg = rawCommand:sub(5)
         local args = msg
@@ -139,14 +171,19 @@ RegisterCommand('taxi', function(source, args, rawCommand)
 			TriggerClientEvent('chat:addMessage', -1, {args = {_U('taxi_prefix', name), args}, color = {255, 255, 51}})
         end
     elseif Config.Tnotify then
-        print (_U('no_taxi')) 
-    elseif Config.Tnotify then
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_taxi')
+        })
+    elseif Config.ESX then
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_taxi'), playerName, _U('no_taxi'), 'CHAR_TAXI', 1)
     end
 end, false)
 
-RegisterCommand('me', function(playerId, args, rawCommand)
+RegisterCommand(Config.meCommand, function(playerId, args, rawCommand)
 	if playerId == 0 then
-		print('esx_rpchat: you can\'t use this command from console!')
+		print(_U('no') )
 	else
 		args = table.concat(args, ' ')
 		local playerName = GetRealPlayerName(playerId)
@@ -155,9 +192,9 @@ RegisterCommand('me', function(playerId, args, rawCommand)
 	end
 end, false)
 
-RegisterCommand('do', function(playerId, args, rawCommand)
+RegisterCommand(Config.doCommand, function(playerId, args, rawCommand)
 	if playerId == 0 then
-		print('esx_rpchat: you can\'t use this command from console!')
+		print(_U('no') )
 	else
 		args = table.concat(args, ' ')
 		local playerName = GetRealPlayerName(playerId)
