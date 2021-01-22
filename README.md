@@ -8,8 +8,11 @@ An average esx_rpchat which has been modified and fixed. It also changes the pla
  - Config for t-notify or ESX notifications.
  - Changed the real name to id to prevent metagaming.
  - Fixed distance (for ESX 1.2)
+ 
+### Optional
+ - T-Notify if you want a custom notification.
 
-### Installation
+## Installation
 - 1. Clone the script with git to your server or use zip
 - 2. Add 'ensure pe-rpchat'
 - 3. Change the config to match what you like the most.
