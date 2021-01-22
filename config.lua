@@ -6,7 +6,7 @@ Config.EnableESXIdentity = true -- Usar nombres del juego (esx_identity) // Usar
 
 Config.Distance         = 20 -- /do and /me distance / distancia del /me y /do
 
---COMMANDS (if you change this, you might have to go to the clien, if you want to can delete the part that when stopped, deletes the suggestions. Not Recommended though
+--COMMANDS (if you change this, you might have to go to the client, if you want to can delete the part that when stopped, deletes the suggestions. Not Recommended though
 Config.PoliceCommand    = 'police'
 Config.AmbulanceCommand = 'ambulance'
 Config.LSCCommand       = 'lsc'
