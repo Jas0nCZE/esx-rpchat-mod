@@ -24,10 +24,19 @@ Locales['es'] = {
   ['generic_argument_help'] = 'el mensaje',
   
   --Notifications
+  ['job_taxi'] = 'Downtown Cab Co.',
+  ['job_pol'] = 'LSPD',
+  ['job_lsc'] = 'Los Santos Customs',
+  ['job_amb'] = 'Cruz Roja',
+  ['job_bennys'] = 'Bennys Custom Works',
+  ['job_tdn'] = 'Mecanico del Norte',
   ['no_police'] = '🚓 | Usted no trabaja en el Cuerpo Nacional de Policia',
   ['no_ambulance'] = '🚑 | Usted no trabaja en la Cruz Roja',
   ['no_bennys'] = '🧰 | Usted no trabaja en el Taller Modificaciones Automovilisticas',
   ['no_lsc'] = '🛠️ | Usted no trabaja en el Taller de Mecánica General',
   ['no_tdn'] = '🔧 | Usted no trabaja en el Taller Mecanica del Automovil',
   ['no_taxi'] = '🚕 | Usted no trabaja en la empresa de Taxis',
+
+  --NO
+  ['no'] = 'No puedes usar este comando desde la consola!',
 }
