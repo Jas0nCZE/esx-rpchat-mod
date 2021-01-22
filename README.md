@@ -7,7 +7,7 @@ An average esx_rpchat which has been modified and fixed. It also changes the pla
  - Job commands
  - Config for t-notify or ESX notifications.
  - Changed the real name to id to prevent metagaming.
- - Fixed distance.
+ - Fixed distance (for ESX 1.2)
 
 ### Installation
 - 1. Clone the script with git to your server or use zip
