@@ -181,6 +181,30 @@ RegisterCommand(Config.TaxiCommand, function(source, args, rawCommand)
     end
 end, false)
 
+RegisterCommand(Config.SheriffCommand, function(source, args, rawCommand)
+    local _source = source
+    local xPlayer = ESX.GetPlayerFromId(_source)
+    local playerName = GetRealPlayerName(source)
+    if xPlayer.job.name == Config.SheriffJob then
+        local src = source
+        local msg = rawCommand:sub(5)
+        local args = msg
+        if player ~= false then
+            local name = GetRealPlayerName(source)
+
+			TriggerClientEvent('chat:addMessage', -1, {args = {_U('sheriff_prefix', name), args}, color = {255, 255, 51}})
+        end
+    elseif Config.Tnotify then
+        TriggerClientEvent('t-notify:client:Custom', source, {
+            style = 'info', 
+            duration = 3000,
+            message = _U('no_sheriff')
+        })
+    elseif Config.ESX then
+        TriggerClientEvent('esx:showAdvancedNotification', xPlayer.source, _U('job_sheriff'), playerName, _U('no_sheriff'), 'CHAR_BLOCKED', 1)
+    end
+end, false)
+
 RegisterCommand(Config.meCommand, function(playerId, args, rawCommand)
 	if playerId == 0 then
 		print(_U('no') )

@@ -13,6 +13,7 @@ Config.LSCCommand       = 'lsc'
 Config.BennysCommand    = 'bennys'
 Config.TDNCommand       = 'tdn'
 Config.TaxiCommand      = 'taxi'
+Config.SheriffCommand   = 'sheriff'
 
 Config.HelpCommand      = 'a'
 Config.IDCommand        = 'id'
@@ -26,6 +27,7 @@ Config.LSCJob           = 'mechanic'
 Config.BennysJob        = 'bennys'
 Config.TDNJob           = 'mecano'
 Config.TaxiJob          = 'taxi'
+Config.SheriffJob          = 'sheriff'
 
 --NOTIFICATION
 Config.Tnotify          = false

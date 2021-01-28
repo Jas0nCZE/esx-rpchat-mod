@@ -23,7 +23,8 @@ Citizen.CreateThread(function()
 	TriggerEvent('chat:addSuggestion', '/bennys',   _U('bennys_help'),   {{name = _U('generic_argument_name'), help = _U('generic_argument_help')}})
 	TriggerEvent('chat:addSuggestion', '/lsc',   _U('lsc_help'),   {{name = _U('generic_argument_name'), help = _U('generic_argument_help')}})	
 	TriggerEvent('chat:addSuggestion', '/tdn',   _U('tdn_help'),   {{name = _U('generic_argument_name'), help = _U('generic_argument_help')}})	
-	TriggerEvent('chat:addSuggestion', '/taxi',   _U('taxi_help'),   {{name = _U('generic_argument_name'), help = _U('generic_argument_help')}})	
+	TriggerEvent('chat:addSuggestion', '/taxi',   _U('taxi_help'),   {{name = _U('generic_argument_name'), help = _U('generic_argument_help')}})
+	TriggerEvent('chat:addSuggestion', '/sheriff',   _U('sheriff_help'),   {{name = _U('generic_argument_name'), help = _U('generic_argument_help')}})	
 end)
 
 AddEventHandler('onResourceStop', function(resource)
@@ -38,7 +39,7 @@ AddEventHandler('onResourceStop', function(resource)
 		TriggerEvent('chat:removeSuggestion', '/lsc')
 		TriggerEvent('chat:removeSuggestion', '/tdn')
 		TriggerEvent('chat:removeSuggestion', '/taxi')
-
+		TriggerEvent('chat:removeSuggestion', '/sheriff')
 	end
 end)
 
