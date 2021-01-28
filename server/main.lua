@@ -235,6 +235,33 @@ RegisterCommand(Config.DieCommand, function(playerId, args, rawCommand)
 	end
 end, false)
 
+RegisterCommand(Config.MSGCommand, function(source, args, user)
+    local playerName = GetRealPlayerName(source)
+	if GetPlayerName(tonumber(args[1])) then
+		local player = tonumber(args[1])
+		table.remove(args, 1)
+        TriggerClientEvent('chat:addMessage', player, {args = {_U('msg', source) .. GetPlayerName(source) .. "~w~: " .. table.concat(args, " ")}, color = {65, 255, 160}})
+        if Config.Tnotify then
+            TriggerClientEvent('t-notify:client:Alert', source, {
+                style  =  'success',
+                message  =  _U('msg_sent')
+            })
+        elseif Config.ESX then
+            TriggerClientEvent('esx:showAdvancedNotification', source, "Info", playerName, _U('msg_sent'), 'CHAR_BLANK_ENTRY', 1)
+        end
+    else
+        if Config.Tnotify then
+            TriggerClientEvent('t-notify:client:Alert', source, {
+                style  =  'error',
+                message  =  _U('no_idt')
+            })
+        elseif Config.ESX then
+            TriggerClientEvent('esx:showAdvancedNotification', source, "Info", playerName, _U('no_id'), 'CHAR_BLOCKED', 1)
+        end
+	end
+
+end,false)
+
 function GetRealPlayerName(playerId)
 	local xPlayer = ESX.GetPlayerFromId(playerId)
 
