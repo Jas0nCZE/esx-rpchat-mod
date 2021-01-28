@@ -40,6 +40,10 @@ Locales['en'] = {
   ['no_taxi']                 = 'You do not work at Downtown Cab Co',
   ['no_sheriff']              = 'You do not work at Blaine Country Sheriff Department',  
 
+  ['dado_help']               = 'Throw a die',
+  ['dado_prefix']             = '[%s] Throws a die from 1 - 6 and gets a ',
+  ['no_dado']                 = 'You cannot throw a die from a vehicle',
+  
   --NO
   ['no']                      = 'You cannot use this from the console!',
 }
