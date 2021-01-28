@@ -40,6 +40,10 @@ Locales['es'] = {
   ['no_taxi']                 = 'Usted no trabaja en la empresa de Taxis',
   ['no_sheriff']              = 'Usted no trabaja en la Guardia Civil',
 
+  ['dado_help']               = 'Tira un dado',
+  ['dado_prefix']             = '[%s] Lanza un dado de 1 - 6 y le toca un ',
+  ['no_dado']                 = 'No puedes tirar los dados desde un vehiculo',
+  
   --NO
   ['no']                      = 'No puedes usar este comando desde la consola!',
 }
