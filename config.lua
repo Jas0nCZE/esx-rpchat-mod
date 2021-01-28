@@ -28,7 +28,7 @@ Config.LSCJob           = 'mechanic'
 Config.BennysJob        = 'bennys'
 Config.TDNJob           = 'mecano'
 Config.TaxiJob          = 'taxi'
-Config.SheriffJob          = 'sheriff'
+Config.SheriffJob       = 'sheriff'
 
 --NOTIFICATION
 Config.Tnotify          = false
