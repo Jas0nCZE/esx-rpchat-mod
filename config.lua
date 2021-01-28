@@ -19,7 +19,8 @@ Config.HelpCommand      = 'a'
 Config.IDCommand        = 'id'
 Config.meCommand        = 'me'
 Config.doCommand        = 'do'
-    
+Config.DieCommand       = 'dado'
+
 --JOBS
 Config.PoliceJob        = 'police'
 Config.AmbulanceJob     = 'ambulance'
