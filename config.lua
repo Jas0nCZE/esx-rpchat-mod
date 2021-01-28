@@ -20,6 +20,7 @@ Config.IDCommand        = 'id'
 Config.meCommand        = 'me'
 Config.doCommand        = 'do'
 Config.DieCommand       = 'dado'
+Config.MSGCommand       = 'message'
 
 --JOBS
 Config.PoliceJob        = 'police'
