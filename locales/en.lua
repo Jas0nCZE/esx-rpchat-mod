@@ -44,6 +44,13 @@ Locales['en'] = {
   ['dado_prefix']             = '[%s] Throws a die from 1 - 6 and gets a ',
   ['no_dado']                 = 'You cannot throw a die from a vehicle',
   
+  ['no_id']                   = 'This ID does not exist',
+  ['no_idt']                  = '❌ | This ID does not exist',
+  ['msg']                     = 'Message from ID: %s | Name: ',
+  ['msg_sent']                = 'Message sent!',
+  ['msg_help']                = 'Send a private message to a player',
+  ['msg_help1']               = 'ID] [Message',
+  
   --NO
   ['no']                      = 'You cannot use this from the console!',
 }
