@@ -4,9 +4,9 @@ Locales['es'] = {
   ['a_prefix']                = '[%s] Ayuda',
   ['id_help']                 = 'Canal para pedir la id de algun jugador',
   ['id_prefix']               = '[%s] Id',
-  ['me_help']                 = 'personal action',
+  ['me_help']                 = 'Accion personal',
   ['me_prefix']               = '[%s] me',
-  ['do_help']                 = 'RP information',
+  ['do_help']                 = 'Informacion del personaje',
   ['do_prefix']               = '[%s] do',
   ['police_help']             = 'Anuncio Cuerpo Nacional de Policia',
   ['police_prefix']           = '🚓 Cuerpo Nacional de Policia | %s^0',
@@ -23,7 +23,7 @@ Locales['es'] = {
   ['sheriff_help']            = 'Anuncio Guardia Civil',
   ['sheriff_prefix']          = '🤠 Guardia Civil | %s^0',
   ['generic_argument_name']   = 'mensaje',
-  ['generic_argument_help']   = 'el mensaje',
+  ['generic_argument_help']   = 'Tu mensaje',
   
   --Notifications
   ['job_taxi']                = 'Downtown Cab Co.',
@@ -43,6 +43,13 @@ Locales['es'] = {
   ['dado_help']               = 'Tira un dado',
   ['dado_prefix']             = '[%s] Lanza un dado de 1 - 6 y le toca un ',
   ['no_dado']                 = 'No puedes tirar los dados desde un vehiculo',
+  
+  ['no_id']                   = 'Esta ID no existe',
+  ['no_idt']                  = '❌ | Esta ID no existe',
+  ['msg']                     = 'Mensaje de: %s | Nombre: ',
+  ['msg_sent']                = 'Mensaje mandado!',
+  ['msg_help']                = 'Manda un mensaje privado',
+  ['msg_help1']               = 'ID] [Mensaje',
   
   --NO
   ['no']                      = 'No puedes usar este comando desde la consola!',
